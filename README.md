@@ -1,29 +1,19 @@
 
 # News App
 
-Merupakan aplikasi baca berita yang dibuat dengan flutter, dengan mengambil API dari website https://newsapi.org. Dan menggunakan State Management Flutter Bloc With Clean Artchitecture Pattern
+This is a news reading application made with Flutter, by taking the API from the website https://newsapi.org. And using State Management Flutter Bloc With Clean Architecture Pattern
 ## Screenshots
 
 ![App Screenshot](https://raw.githubusercontent.com/NorkusDev/news_app/master/lib/src/screenshoot/app_screenshoot.png)
 
 
-## Fitur Aplikasi
+## Application Features
 
-- Berita Terbaru
-- Pencarian Berita
-- Trending Berita
-- Rekomendasi Berita
-- Bookmark Berita
-- Detail Berita
-- Fitur Dark Mode
+- News Update
+- News Search
+- Trending News
+- Recommended News
+- Bookmark News
+- News Details
+- Dark Mode Feature
 
-
-## Cara Penggunaan Source Code
-
-Kamu perlu registrasi API KEY dari https://newsapi.org/ kemudian memasukkan API KEY ke lib\src\core\networks\network_constant.dart
-
-```bash
-// ganti dengan key kamu
-const key = "__here__";
-```
-    
