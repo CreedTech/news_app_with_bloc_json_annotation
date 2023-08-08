@@ -34,7 +34,7 @@ class _ExploreViewsState extends State<ExploreViews> {
           ElevatedButton(
             onPressed: () => Guide.to(name: searchNews),
             style: ElevatedButton.styleFrom(
-              primary: Guide.isDark(context) ? colorsBlack : colorWhite,
+              backgroundColor: Guide.isDark(context) ? colorsBlack : colorWhite,
               elevation: 0,
             ),
             child: SvgPicture.asset(

@@ -26,14 +26,12 @@ class NewsRepositoryImpl implements NewsRepository {
         await localSource.cacheRecommendation(remote);
         return Right(remote.toEntity());
       } on DioError catch (e) {
-        print(e);
         return Left(
           NetworkFailure(
             responseException: ResponseException.getDioException(e),
           ),
         );
       } catch (e) {
-        print(e);
         return Left(
           NetworkFailure(
             responseException: ResponseException.getDioException(e),
@@ -72,17 +70,14 @@ class NewsRepositoryImpl implements NewsRepository {
           limit: 3,
         );
         await localSource.cacheTrending(remote);
-        print(remote.toEntity());
         return Right(remote.toEntity());
       } on DioError catch (e) {
-        print(e);
         return Left(
           NetworkFailure(
             responseException: ResponseException.getDioException(e),
           ),
         );
       } catch (e) {
-        print(e);
         return Left(
           NetworkFailure(
             responseException: ResponseException.getDioException(e),
@@ -92,7 +87,6 @@ class NewsRepositoryImpl implements NewsRepository {
     } else {
       try {
         final local = await localSource.getTrending();
-        print(local.toEntity());
         return Right(local.toEntity());
       } on CacheException catch (_) {
         return Left(
@@ -126,19 +120,14 @@ class NewsRepositoryImpl implements NewsRepository {
           limit: limit,
           page: page,
         );
-        print(remote.toEntity());
         return Right(remote.toEntity());
       } on DioError catch (e) {
-        print(e);
-        print(e);
         return Left(
           NetworkFailure(
             responseException: ResponseException.getDioException(e),
           ),
         );
       } catch (e) {
-        print(e);
-        print(e);
         return Left(
           NetworkFailure(
             responseException: ResponseException.getDioException(e),
@@ -167,17 +156,14 @@ class NewsRepositoryImpl implements NewsRepository {
         );
         // top-headlines?category=general&language=$language&pageSize=5&page=3&apiKey=$key
         await localSource.cacheHot(remote);
-        print(remote.toEntity());
         return Right(remote.toEntity());
       } on DioError catch (e) {
-        print(e);
         return Left(
           NetworkFailure(
             responseException: ResponseException.getDioException(e),
           ),
         );
       } catch (e) {
-        print(e);
         return Left(
           NetworkFailure(
             responseException: ResponseException.getDioException(e),
@@ -187,7 +173,6 @@ class NewsRepositoryImpl implements NewsRepository {
     } else {
       try {
         final local = await localSource.getHotNews();
-        print(local.toEntity());
         return Right(local.toEntity());
       } on CacheException catch (_) {
         return Left(
@@ -223,17 +208,14 @@ class NewsRepositoryImpl implements NewsRepository {
           limit: limit,
           page: page,
         );
-        print(remote.toEntity());
         return Right(remote.toEntity());
       } on DioError catch (e) {
-        print(e);
         return Left(
           NetworkFailure(
             responseException: ResponseException.getDioException(e),
           ),
         );
       } catch (e) {
-        print(e);
         return Left(
           NetworkFailure(
             responseException: ResponseException.getDioException(e),

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-
 import 'src/core/components/component_constant.dart';
 import 'src/core/components/component_theme.dart';
 import 'src/core/helpers/helper_routes.dart';

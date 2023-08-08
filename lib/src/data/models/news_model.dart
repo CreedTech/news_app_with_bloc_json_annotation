@@ -1,5 +1,4 @@
 import 'package:html/parser.dart';
-import 'package:json_annotation/json_annotation.dart';
 import 'package:news_app/src/domain/entitites/news_entities.dart';
 import 'dart:convert';
 

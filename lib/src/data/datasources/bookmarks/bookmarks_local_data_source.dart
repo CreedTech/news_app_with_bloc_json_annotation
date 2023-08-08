@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
+
 import '../../../core/core.dart';
 import '../../models/news_model.dart';
 
@@ -80,8 +82,7 @@ class BookmarkLocalDataSourceImpl implements BookmarkLocalDataSource {
   @override
   Future<NewsModel> readBookmark() async {
     final jsonString = await storage.read(CACHED_BOOKMARK);
-    print("jsonString");
-    print(jsonString);
+    debugPrint(jsonString);
     if (jsonString != null) {
       return NewsModel.fromJson(json.decode(jsonString));
     } else {

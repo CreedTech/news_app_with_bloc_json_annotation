@@ -102,8 +102,6 @@ class _BookmarkViewState extends State<BookmarkView> {
                 }
                 if (state.status == BookmarkBlocStatus.loaded) {
                   final data = state.response?.articles ?? [];
-                  print("Data");
-                  print(data);
 
                   return data.isNotEmpty
                       ? ListView.builder(

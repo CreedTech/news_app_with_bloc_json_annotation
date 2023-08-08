@@ -21,36 +21,32 @@ final ligthTheme = ThemeData(
   bottomSheetTheme:
       BottomSheetThemeData(backgroundColor: Colors.black.withOpacity(0)),
   scaffoldBackgroundColor: Colors.white,
-  backgroundColor: Colors.white,
-  textTheme: const TextTheme(
-    bodyText1: TextStyle(),
-    bodyText2: TextStyle(),
+  textTheme:  const TextTheme(
+    bodyLarge: TextStyle(),
+    bodyMedium: TextStyle(),
   ).apply(
     bodyColor: colorsBlack,
     displayColor: colorsBlack,
   ),
-  colorScheme: const ColorScheme.light()
+  textSelectionTheme: const TextSelectionThemeData(cursorColor: colorPrimary), colorScheme: const ColorScheme.light()
       .copyWith(primary: colorPrimary, onPrimary: colorPrimary)
       .copyWith(
         primary: colorPrimary,
         secondary: colorPrimary,
         brightness: Brightness.light,
-      ),
-  textSelectionTheme: const TextSelectionThemeData(cursorColor: colorPrimary),
+      ).copyWith(background: Colors.white),
 );
 
 final darkTheme = ThemeData(
   visualDensity: VisualDensity.adaptivePlatformDensity,
   primaryColor: colorPrimary,
-  // primarySwatch: colorPrimary,
-  backgroundColor: colorsBlack,
   progressIndicatorTheme: const ProgressIndicatorThemeData(
     color: Colors.white,
   ),
   brightness: Brightness.dark,
   textTheme: const TextTheme(
-    bodyText1: TextStyle(),
-    bodyText2: TextStyle(),
+    bodyLarge: TextStyle(),
+    bodyMedium: TextStyle(),
   ).apply(
     bodyColor: Colors.white,
     displayColor: Colors.white,
@@ -59,11 +55,10 @@ final darkTheme = ThemeData(
   bottomSheetTheme:
       BottomSheetThemeData(backgroundColor: Colors.black.withOpacity(0)),
   scaffoldBackgroundColor: colorsBlack,
-  colorScheme: const ColorScheme.dark()
+  textSelectionTheme: const TextSelectionThemeData(cursorColor: colorPrimary), colorScheme: const ColorScheme.dark()
       .copyWith(primary: colorPrimary, onPrimary: colorPrimary)
       .copyWith(
         secondary: colorPrimary,
         brightness: Brightness.dark,
-      ),
-  textSelectionTheme: const TextSelectionThemeData(cursorColor: colorPrimary),
+      ).copyWith(background: colorsBlack),
 );

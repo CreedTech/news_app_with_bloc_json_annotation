@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-
 import '../../../core/core.dart';
 import '../../models/news_model.dart';
 
@@ -47,12 +46,8 @@ class NewsRemoteDataSourceImpl implements NewsRemoteDataSource {
       );
 
       if (response.statusCode == 200) {
-        print("1");
-        // print(response.data);
         return NewsModel.fromJson(response.data);
       } else {
-        print("2");
-        print(DioError);
         throw DioError;
       }
     } else {
@@ -63,12 +58,9 @@ class NewsRemoteDataSourceImpl implements NewsRemoteDataSource {
       );
 
       if (response.statusCode == 200) {
-        print("3");
         // print(response.data);
         return NewsModel.fromJson(response.data);
       } else {
-        print("4");
-        print(DioError);
         throw DioError;
       }
     }

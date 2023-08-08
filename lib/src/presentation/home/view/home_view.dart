@@ -85,7 +85,7 @@ class _HomeViewState extends State<HomeView> {
           ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-              primary: Guide.isDark(context) ? colorsBlack : colorWhite,
+              backgroundColor: Guide.isDark(context) ? colorsBlack : colorWhite,
               elevation: 0,
             ),
             child: SvgPicture.asset(
@@ -232,7 +232,6 @@ class _HomeViewState extends State<HomeView> {
         }
         if (state.statusRecommendation == HomeBlocStatus.loaded) {
           final recommendation = state.recommendation?.articles ?? [];
-          print(recommendation);
           return SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Padding(
@@ -272,8 +271,7 @@ class _HomeViewState extends State<HomeView> {
                                     width: 115.w,
                                     height: 100.h,
                                     child: CachedNetworkImage(
-                                      imageUrl:
-                                          recommendation[index].banner,
+                                      imageUrl: recommendation[index].banner,
                                       imageBuilder: (c, image) => Container(
                                         decoration: BoxDecoration(
                                           image: DecorationImage(
@@ -352,8 +350,7 @@ class _HomeViewState extends State<HomeView> {
                                             ),
                                             Text(
                                               timeago.format(
-                                                recommendation[index]
-                                                    .date,
+                                                recommendation[index].date,
                                               ),
                                             )
                                                 .boldSized(10)
